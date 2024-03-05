@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/app.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/bundles/bootstrap-social/bootstrap-social.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/bundles/bootstrap-daterangepicker/daterangepicker.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/bundles/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/bundles/select2/dist/css/select2.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/bundles/jquery-selectric/selectric.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/bundles/bootstrap-timepicker/css/bootstrap-timepicker.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.css}">
+
+    <!-- Typography CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/components.css}"/>
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/custom.css}"/>
+
+    <link rel="shortcut icon" type='image/x-icon' th:href="@{/img/favicon.ico}"/>
+
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Tableau de bord</title>
+</head>
+<body>
+    <th:block th:replace="fragments/header :: header"/>
+
+    <!--<div class="loader"></div>-->
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+            <th:block layout:fragment="content"/>
+        </div>
+        <th:block th:replace="fragments/footer :: footer"/>
+    </div>
+
+
+    <!-- General JS Scripts -->
+    <script type="text/javascript" th:src="@{/js/app.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/cleave-js/dist/cleave.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/cleave-js/dist/addons/cleave-phone.us.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/jquery-pwstrength/jquery.pwstrength.min.js}"></script>
+
+    <script type="text/javascript" th:src="@{/bundles/bootstrap-daterangepicker/daterangepicker.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/bootstrap-timepicker/js/bootstrap-timepicker.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/select2/dist/js/select2.full.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/jquery-selectric/jquery.selectric.min.js}"></script>
+    <!-- Page Specific JS File -->
+    <script type="text/javascript" th:src="@{/js/page/index.js}"></script>
+
+
+    <script type="text/javascript" th:src="@{/bundles/summernote/summernote-bs4.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/codemirror/lib/codemirror.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/codemirror/mode/javascript/javascript.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/jquery-selectric/jquery.selectric.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/ckeditor/ckeditor.js}"></script>
+
+    <!-- Page Specific JS File -->
+    <script type="text/javascript" th:src="@{/bundles/js/page/ckeditor.js}"></script>
+
+    <script type="text/javascript" th:src="@{/bundles/jquery-validation/dist/jquery.validate.min.js}"></script>
+    <!-- JS Libraies -->
+    <script type="text/javascript" th:src="@{/bundles/jquery-steps/jquery.steps.min.js}"></script>
+    <!-- Page Specific JS File -->
+    <script type="text/javascript" th:src="@{/js/page/form-wizard.js}"></script>
+
+    <!-- JS Libraies -->
+    <script type="text/javascript" th:src="@{/bundles/apexcharts/apexcharts.min.js}"></script>
+
+    <!-- Template JS File -->
+    <script type="text/javascript" th:src="@{/js/custom.js}"></script>
+
+    <script type="text/javascript" th:src="@{/js/page/forms-advanced-forms.js}"></script>
+    <!-- Custom JS File -->
+    <script type="text/javascript" th:src="@{/js/scripts.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/sweetalert/sweetalert.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bundles/jquery-ui/jquery-ui.min.js}"></script>
+
+</body>
+</html>

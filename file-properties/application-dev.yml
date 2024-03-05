@@ -1,0 +1,88 @@
+constants:
+  appUserList:
+  -
+    userId: 2
+    userName: joeladjidan@gmail.com
+    password: Ines26031986*
+    role: USER
+  -
+    userId: 1
+    userName: admin
+    password: password
+    role: ADMIN
+
+server:
+  port: 8082
+  context-path: /soul-dashboard
+  ssl:
+    enabled: false
+    protocol: TLS
+    key-alias: ebook_ssl
+    key-store-type: JKS
+    key-store: F:\Projets\ebook\certificat\ebook
+    key-store-password: Ines26031986*
+    trust-store: F:\Projets\ebook\certificat\ebook
+    trust-store-password: Ines26031986*
+
+
+
+spring:
+  profiles: dev
+  application:
+    name: soul-dashboard
+
+  servlet:
+    multipart:
+      enabled: 'true'
+      max-request-size: 215MB
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+    main:
+      allow-circular-references: true
+    datasource:
+      url: jdbc:mysql://localhost:3306/sanctityoflorddb?createDatabaseIfNotExist=true&userSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    ## Specify DBMS
+    jpa:
+      database: MYSQL
+      show-sql: false
+      properties:
+        hibernate:
+          ddl-auto: update
+          dialect: org.hibernate.dialect.MySQL5Dialect
+        # session_factory:
+        #   interceptor: com.joeladjidan.sanctityoflord.interceptor.Interceptor
+
+      # Hibernate DDL Auto (create, create-drop, update)
+      hibernate:
+        ddl-auto: update
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+    # excluded-view-names:
+    # template-resolver-order:
+    # view-names:
+
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    root: WARN
+    org.springframework.web: ERROR
+    com.church.sanctityoflord: ERROR
+    org.hibernate: ERROR
+    org.springframework.security: ERROR
+  file:
+    name: C:/jar/logs/soul-dasboard.log

@@ -1,0 +1,9 @@
+.logo-name{font-size: 12px !important; color: blanchedalmond}
+.main-sidebar { background-color: #106bb1 !important;}
+.theme-white .navbar {background-color: #ffc61a !important; }
+.download-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    margin: 10px auto 0px auto;
+}
